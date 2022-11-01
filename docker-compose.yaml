@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  
+  phpapache:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./php:/var/www/
+    expose:
+      - 80
+    ports:
+      - 80:80
+
+  mysql:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=volkan
+      - MYSQL_DATABASE=botiga
+      - MYSQL_USER=volkan
+      - MYSQL_PASSWORD=volkan
+    expose:
+      - 3310
+    volumes:
+      - ./importBBDD:/docker-entrypoint-initdb.d 
+    ports:
+      - 3310:3306
+  
+  phpmyadmin:
+    image: phpmyadmin
+    environment:
+      - PMA_HOST=mysql
+      - UPLOAD_LIMIT=300M
+    expose:
+      - 8080
+    ports:
+      - 8080:80
