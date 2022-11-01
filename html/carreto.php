@@ -65,10 +65,10 @@ session_start();
           </tr>
         </thead>
         <tbody>
-            <?php foreach($carreto as $fila) {?>
+            <?php foreach($carreto as $camiseta) {?>
             <tr>
 
-            <?php foreach($fila as $columna) {?>
+            <?php foreach($camiseta as $columna) {?>
 
             <td> <?php echo "$columna" ?> </td>
 
