@@ -1,4 +1,24 @@
 <?php
+
+class camiseta {
+  private $id;
+  private $nom;
+  private $descripcio;
+  private $preu;
+  
+  function get_id() {
+    return $this->id;
+  }
+  function get_nom() {
+    return $this->nom;
+  }
+  function get_descripcio() {
+    return $this->descripcio;
+  }
+  function get_preu() {
+    return $this->preu;
+  }
+}
 include ('config-db.php');
 session_start();
   $carreto = array
