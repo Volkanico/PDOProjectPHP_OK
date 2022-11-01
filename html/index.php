@@ -56,12 +56,10 @@
     while ($row = $stmt->fetch()){
   
     ?>
-
         <div class="container-md">
           <table class="table table-striped table-hover">
             <thead>
               <tr>
-
                 <th scope="col">Producte</th>
                 <th scope="col">Descripció</th>
                 <th scope="col" style="float:left">Veure</th>
@@ -81,7 +79,6 @@
                 "<br> - Preu: " . $row["preu"].
                 "</td>".
                 "<td class='col-4'><a href='fitxaProducte.php?id=" .$row["id"] ."'>"?><button type="button" class="btn btn-primary col-10" style="float:left;margin-top:60px;">Veure producte</button><?php echo "</a></td>";
-
                  ?>  
           </tr>
         </tbody>
@@ -93,5 +90,4 @@
     ?>
   </div>
 </body>
-
 </html>

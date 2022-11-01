@@ -1,8 +1,6 @@
 <?php
 include ('config-db.php');
-
 session_start();
-
   $carreto = array
  					(
  					array("1","Camiseta llarga","Es per el fred","30"),
@@ -13,7 +11,6 @@ session_start();
           array("6","Camiseta de esport","Per fer-la sudar","90")
  					);
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +24,6 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
   </head>
     
 <body class="p-3 mb-2 bg-primary text-white">
@@ -50,10 +46,8 @@ session_start();
             <td> <?php echo "$columna" ?> </td>
 
             <?php } ?>
-
             </tr>
             <?php } ?>
-        
           </tbody>
       </table>
       <div style="bottom:0; padding:40px; text-align: center;">

@@ -1,6 +1,5 @@
 <?php
 /*include ('secure_implement.php');*/
-
 include ('config-db2.php');
 ?>
 
@@ -22,13 +21,9 @@ include ('config-db2.php');
             margin:20px;
             width:50%;
         }
-
         form > *{
             margin:10px;
         }
-        
-
-    
     </style>
 </head>
 <body class="p-3 mb-2 bg-primary text-white"">
@@ -41,8 +36,5 @@ include ('config-db2.php');
         <button type="submit" class="btn btn-dark">Afegir</button>
         <a href="index.php"><button type="button" class="btn btn-light">Tornar enrere</button></a>
     </form> 
-    
 </body>
-
-
 </html>
