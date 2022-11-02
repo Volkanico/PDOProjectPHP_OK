@@ -65,16 +65,16 @@ class camiseta {
           </tr>
         </thead>
         <tbody>
-            <?php foreach($carreto as $camiseta) {?>
+            <?php foreach($carreto as $fila) {?>
             <tr>
 
-            <?php foreach($camiseta as $columna) {?>
+            <?php $x['camiseta']->get_id()?>
 
-            <td> <?php echo "$columna" ?> </td>
+            <td> <?php echo "$id" ?> </td>
 
             <?php } ?>
             </tr>
-            <?php } ?>
+            
           </tbody>
       </table>
       <div style="bottom:0; padding:40px; text-align: center;">

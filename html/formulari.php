@@ -1,5 +1,4 @@
 <?php
-/*include ('secure_implement.php');*/
 include ('config-db2.php');
 ?>
 
