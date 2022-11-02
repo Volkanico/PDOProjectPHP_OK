@@ -2,9 +2,10 @@
 include ('config-db2.php');
        session_start();
        
-       $pdo = new PDO('mysql:host=localhost;dbname=botiga', $nuevaconexion->get_username() ,$nuevaconexion->get_password());
+       
        $nuevaconexion = new Conexion("Admin","Admin");
        $nuevaconexion->conectar();
+       $pdo = new PDO('mysql:host=localhost;dbname=botiga',username ,password);
        $stmt = $pdo->prepare("INSERT INTO camisetes WHERE (id,nom,descripcio,preu) VALUES (:id,:nom,:descripcio,:preu");
        $stmt->bindValue(':id', $_POST['id']);
        $stmt->bindValue(':nom', $_POST['nom']);
