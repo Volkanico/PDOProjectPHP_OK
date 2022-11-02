@@ -1,10 +1,8 @@
 <?php 
 include ('config-db2.php');
        session_start();
-       $username = "Admin";
-       $password = "Admin";
        
-       $pdo = new PDO('mysql:host=localhost;dbname=botiga', $username,$password);
+       $pdo = new PDO('mysql:host=localhost;dbname=botiga', $nuevaconexion->get_username() ,$nuevaconexion->get_password());
        $nuevaconexion = new Conexion("Admin","Admin");
        $nuevaconexion->conectar();
        $stmt = $pdo->prepare("INSERT INTO camisetes WHERE (id,nom,descripcio,preu) VALUES (:id,:nom,:descripcio,:preu");

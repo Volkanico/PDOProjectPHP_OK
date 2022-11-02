@@ -1,4 +1,6 @@
 <?php
+include ('config-db2.php');
+session_start();
 
 class camiseta {
   private $id;
@@ -26,8 +28,7 @@ class camiseta {
     return $this->preu;
   }
 }
-include ('config-db.php');
-session_start();
+
   $carreto = array
  					(
             $camiseta1 = new camiseta("1","Camiseta llarga","Es per el fred","30"),

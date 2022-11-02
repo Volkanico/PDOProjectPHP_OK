@@ -42,11 +42,10 @@
     <?php
 
     include('config-db2.php');
-    $username = "Admin";
-    $password = "Admin";
-    $pdo = new PDO('mysql:host=localhost;dbname=botiga', $username,$password);
     $nuevaconexion = new Conexion();
     $nuevaconexion->conectar();
+    $pdo = new PDO('mysql:host=localhost;dbname=botiga',$nuevaconexion->get_username() ,$nuevaconexion->get_password());
+    
     $stmt = $pdo->prepare("SELECT * FROM camisetes");
     // Especificamos el fetch mode antes de llamar a fetch()
     $stmt->setFetchMode(PDO::FETCH_ASSOC);

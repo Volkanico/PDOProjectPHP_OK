@@ -29,10 +29,7 @@ session_start();
         <?php
             
             $id=$_GET["id"];
-
-            $username = "Admin";
-            $password = "Admin";
-            $pdo = new PDO('mysql:host=localhost;dbname=botiga', $username,$password);
+            $pdo = new PDO('mysql:host=localhost;dbname=botiga', $nuevaconexion->get_username() ,$nuevaconexion->get_password());
             $nuevaconexion = new Conexion();
             $nuevaconexion->conectar();
             $stmt = $pdo->prepare("SELECT * FROM camisetes WHERE id = $id");
