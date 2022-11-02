@@ -40,7 +40,6 @@ session_start();
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
             // Ejecutamos
             $stmt->execute();
-
             
                 // output data of each row
                 while($row = $stmt->fetch()) {
