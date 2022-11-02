@@ -29,15 +29,14 @@ class camiseta {
   }
 }
 
-  $carreto = array
- 					(
-            $camiseta1 = new camiseta("1","Camiseta llarga","Es per el fred","30"),
-            $camiseta2 = new camiseta("2","Camiseta cool","Per pijos","40"),
-            $camiseta3 = new camiseta("3","Camiseta chic","La moda d'avui","90"),
-            $camiseta4 = new camiseta("4","Camiseta hippie","Per hippies dels anys 60","10"),
-            $camiseta5 = new camiseta("5","Camiseta de moda","La seva moda dura 3 dies","90"),
-            $camiseta6 = new camiseta("6","Camiseta de esport","Per fer-la sudar","90")
- 					);
+            $carreto= array (
+            new camiseta("1","Camiseta llarga","Es per el fred","30"),
+            new camiseta("2","Camiseta cool","Per pijos","40"),
+            new camiseta("3","Camiseta chic","La moda d'avui","90"),
+            new camiseta("4","Camiseta hippie","Per hippies dels anys 60","10"),
+            new camiseta("5","Camiseta de moda","La seva moda dura 3 dies","90"),
+            new camiseta("6","Camiseta de esport","Per fer-la sudar","90")
+            )
 ?>
 
 <!DOCTYPE html>
