@@ -40,7 +40,6 @@
     </nav>
 
     <?php
-
     include('config-db2.php');
     $nuevaconexion = new Conexion();
     $nuevaconexion->conectar();
