@@ -65,12 +65,13 @@ class camiseta {
           </tr>
         </thead>
         <tbody>
-            <?php foreach($carreto as $fila) {?>
+            <?php foreach($carreto as $camiseta) {?>
             <tr>
 
-            <?php $x['camiseta']->get_id()?>
-
-            <td> <?php echo "$id" ?> </td>
+            <td> <?php echo $camiseta->get_id() ?> </td>
+            <td> <?php echo $camiseta->get_nom() ?> </td>
+            <td> <?php echo $camiseta->get_descripcio() ?> </td>
+            <td> <?php echo $camiseta->get_preu() ?> </td>
 
             <?php } ?>
             </tr>

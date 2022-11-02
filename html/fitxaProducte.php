@@ -45,7 +45,7 @@ session_start();
            
             ?>
         </div>
-        <div class="d-grid gap-2 col-4 mx-auto" style="text-align: center; margin-bottom: 10px; padding:10px;">
+        <div class="d-grid gap-2 col-12 mx-auto" style="text-align: center; margin-bottom: 10px; padding:10px;">
             <a><button type="button" class="btn btn-light">Afegir al carreto</button></a><br>
             <a href="index.php"><button type="button" class="btn btn-light">Tornar enrere</button></a>
         </div>
