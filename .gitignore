@@ -14,4 +14,4 @@ node_modules
 .sass-cache
 
 # Ignorar username y password
-config-db.php
+./html/config-db.php
