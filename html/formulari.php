@@ -25,7 +25,7 @@ include ('config-db2.php');
         }
     </style>
 </head>
-<body class="p-3 mb-2 bg-primary text-white"">
+<body class="p-3 mb-2 bg-primary text-white">
 
     <form action="afegir_producte.php" method="post">
         <input class="form-control form-control-lg" type="text" placeholder="id" name="id">

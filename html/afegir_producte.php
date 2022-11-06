@@ -18,5 +18,5 @@ include ('config-db2.php');
       $preu = $_POST['preu'];
 
 
-      $stmt->execute([$id,$nom,$descripcio,$preu]);
+      $stmt->execute();
 ?>
