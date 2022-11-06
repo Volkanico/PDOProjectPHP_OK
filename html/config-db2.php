@@ -1,32 +1,37 @@
 <?php
+const servername = "localhost";
+const username = "admin";
+const password = "admin";
+const dbname = "botiga";
 
-use FTP\Connection as FTPConnection;
-
-include ('config-db.php');
-
-class Conexion
-{
+class Conexion{
+   
     // Contenedor Instancia de la clase
     private static $instance = NULL;
     private $con = NULL;
     // Constructor privado, previene la creación de objetos vía new
-    private function __construct() {
+    function __construct() {
         $this->con = new mysqli(servername,username,password,dbname);
     }
-
-    // Clone no permitido
-    private function __clone() { }
 
     // Método singleton 
     public static function getInstance()
     {
         if (is_null(self::$instance)) {
-            self::$instance = new Conexion();
+            self::$instance = new Singleton();
         }
 
         return self::$instance;
     }
-    
+
+    function conectar(){
+        try {
+            $pdo = new PDO('mysql:host=localhost;dbname=botiga',username,password);
+            //echo "conexion correcta";
+        } catch(PDOException $exception) {
+            echo "conexion incorrecta".$exception->getMessage();
+        }
+    }
 }
 
 ?>
