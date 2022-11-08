@@ -2,7 +2,7 @@
 include ('config-db2.php');
        session_start();
        
-       $nuevaconexion = new Conexion("Admin","Admin");
+       $nuevaconexion = new Conexion();
        $nuevaconexion->conectar();
        $pdo = new PDO('mysql:host=localhost;dbname=botiga',username ,password);
        $stmt = $pdo->prepare("INSERT INTO camisetes WHERE (id,nom,descripcio,preu) VALUES (:id,:nom,:descripcio,:preu");
@@ -19,4 +19,5 @@ include ('config-db2.php');
 
 
       $stmt->execute();
+      header("Location: ./index.php");
 ?>

@@ -1,0 +1,8 @@
+form{
+    margin:20px;
+    width:50%;
+}
+form > *{
+    margin:10px;
+}
+* {font-size: 16px;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}button {margin:auto;}
