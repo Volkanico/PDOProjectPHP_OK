@@ -27,17 +27,16 @@ class camiseta {
   function get_preu() {
     return $this->preu;
   }
-  
 }
 
-            $carreto= array (
-            new camiseta("1","Camiseta llarga","Es per el fred","30"),
-            new camiseta("2","Camiseta cool","Per pijos","40"),
-            new camiseta("3","Camiseta chic","La moda d'avui","90"),
-            new camiseta("4","Camiseta hippie","Per hippies dels anys 60","10"),
-            new camiseta("5","Camiseta de moda","La seva moda dura 3 dies","90"),
-            new camiseta("6","Camiseta de esport","Per fer-la sudar","90")
-            )
+  $carreto= array (
+    new camiseta("1","Camiseta llarga","Es per el fred","30"),
+    new camiseta("2","Camiseta cool","Per pijos","40"),
+    new camiseta("3","Camiseta chic","La moda d'avui","90"),
+    new camiseta("4","Camiseta hippie","Per hippies dels anys 60","10"),
+    new camiseta("5","Camiseta de moda","La seva moda dura 3 dies","90"),
+    new camiseta("6","Camiseta de esport","Per fer-la sudar","90")
+  )
 ?>
 
 <!DOCTYPE html>
@@ -65,13 +64,12 @@ class camiseta {
         </thead>
         <tbody>
             <?php foreach($carreto as $camiseta) {?>
-            <tr>
 
+            <tr>
             <td> <?php echo $camiseta->get_id() ?> </td>
             <td> <?php echo $camiseta->get_nom() ?> </td>
             <td> <?php echo $camiseta->get_descripcio() ?> </td>
             <td> <?php echo $camiseta->get_preu() ?> </td>
-
             <?php } ?>
             </tr>
             

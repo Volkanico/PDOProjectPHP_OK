@@ -15,20 +15,18 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </head>
 
-
-
 <body class="p-3 mb-2 bg-primary text-black">
     <div class="container-sm" style="padding: 80px; background-color: lightgray; border-radius: 20px; margin-top:10px; border:1px solid black;">
         <div style="width:50%; height:60%;">
         <h3>Producte</h3>
 
         <?php
-        $nuevaconexion = new Conexion();
-        $nuevaconexion->conectar();
-            $id=$_GET["id"];
-            $pdo = new PDO('mysql:host=localhost;dbname=botiga',username ,password);
+        $id=$_GET["id"];
+        $connection = Conexion::getInstance();
+        $query = "SELECT * FROM camisetes WHERE id = $id";
+        $stmt = $connection->getConnection()->prepare($query);
             
-            $stmt = $pdo->prepare("SELECT * FROM camisetes WHERE id = $id");
+           
             // Especificamos el fetch mode antes de llamar a fetch()
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
             // Ejecutamos
@@ -40,7 +38,7 @@ session_start();
                         echo "<img width='200px' height='200px' src='../img/" . $row["id"]. ".jpg'><br><br><br> - Id: " . $row["id"]. "<br> - Nom: ". $row["nom"]. "<br> - Descripcio: ". $row["descripcio"]. "<br> - Preu: ". $row["preu"]. "<br>";
                     }
                 }
-           
+
             ?>
         </div>
         <div class="d-grid gap-2 col-12 mx-auto" style="text-align: center; margin-bottom: 10px; padding:10px;">

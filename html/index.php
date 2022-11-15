@@ -37,11 +37,12 @@
     <?php
     include('config-db2.php');
 
-    $nuevaconexion = new Conexion();
-    $nuevaconexion->conectar();
-    $pdo = new PDO('mysql:host=localhost;dbname=botiga', username, password);
+    $connection = Conexion::getInstance();
+    $query = "SELECT * FROM camisetes";
 
-    $stmt = $pdo->prepare("SELECT * FROM camisetes");
+    $stmt = $connection->getConnection()->prepare($query);
+
+    
     // Especificamos el fetch mode antes de llamar a fetch()
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     // Ejecutamos
