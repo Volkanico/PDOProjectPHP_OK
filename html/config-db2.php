@@ -1,46 +1,54 @@
 <?php
-
-
-class Conexion{
+class Conexion {
     private $servername = "localhost";
     private $username = "admin";
     private $password = "admin";
     private $dbname = "botiga";
     private static $instance = NULL;
     private $conn = NULL;
-    
+
     function __construct() {
         try {
-            $this->conn = new PDO('mysql:host=localhost;dbname=botiga',$this->username,$this->password);
+            $this->conn = new PDO('mysql:host=localhost;dbname=botiga', $this->username, $this->password);
             echo "conexion correcta";
-        } catch(PDOException $exception) {
-            echo "conexion incorrecta".$exception->getMessage();
+        } catch (PDOException $exception) {
+            echo "conexion incorrecta" . $exception->getMessage();
         }
     }
-    
-    public static function getInstance(){
+
+    public static function getInstance() {
         if (self::$instance == null) {
-        self::$instance = new Conexion();
+            self::$instance = new Conexion();
         }
         return self::$instance;
-        }
-
-    public function getConnection(){
-    return $this->conn;
-  }
-  public static function close(){
-    self::$instance = null;
- }
-
- function conectar(){
-    try {
-        $pdo = new PDO('mysql:host=localhost;dbname=botiga',$this->username,$this->password);
-        //echo "conexion correcta";
-    } catch(PDOException $exception) {
-        echo "conexion incorrecta".$exception->getMessage();
     }
-}
 
+    public function getConnection() {
+        
+        try {
+            //creating connection to mysql
+            echo "TODO OK";
+            return $this->conn;
+            
+            }
+        catch(PDOException $e)
+            {
+            echo "Connection failed: " . $e->getMessage();
+            exit;
+            }
+    }
+    public static function close() {
+        self::$instance = null;
+    }
+
+    function conectar() {
+        try {
+            $pdo = new PDO('mysql:host=localhost;dbname=botiga', $this->username, $this->password);
+            //echo "conexion correcta";
+        } catch (PDOException $exception) {
+            echo "conexion incorrecta" . $exception->getMessage();
+        }
+    }
 }
 
 
@@ -64,4 +72,3 @@ class Connection {
 */
 
 //https://phpenthusiast.com/blog/the-singleton-design-pattern-in-php
-?>

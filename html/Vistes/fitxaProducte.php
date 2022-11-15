@@ -1,5 +1,5 @@
 <?php
-include ('config-db2.php');
+include ('../config-db2.php');
 session_start();
 ?>
 
@@ -35,7 +35,7 @@ session_start();
                 // output data of each row
                 while($row = $stmt->fetch()) {
                     if($row['id'] == $id) {
-                        echo "<img width='200px' height='200px' src='../img/" . $row["id"]. ".jpg'><br><br><br> - Id: " . $row["id"]. "<br> - Nom: ". $row["nom"]. "<br> - Descripcio: ". $row["descripcio"]. "<br> - Preu: ". $row["preu"]. "<br>";
+                        echo "<img width='200px' height='200px' src='../../img/" . $row["id"]. ".jpg'><br><br><br> - Id: " . $row["id"]. "<br> - Nom: ". $row["nom"]. "<br> - Descripcio: ". $row["descripcio"]. "<br> - Preu: ". $row["preu"]. "<br>";
                     }
                 }
 

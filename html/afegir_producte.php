@@ -1,5 +1,5 @@
 <?php 
-include ('config-db2.php');
+include ('../config-db2.php');
        session_start();
        $id = $_POST['id'];
        $nom = $_POST['nom'];

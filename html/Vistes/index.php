@@ -24,7 +24,7 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="formulari.php">Formulari</a>
+              <a class="nav-link active" aria-current="page" href="../formulari.php">Formulari</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="carreto.php">Carretó</a>
@@ -35,14 +35,13 @@
     </nav>
 
     <?php
-    include('config-db2.php');
+    include('../config-db2.php');
 
     $connection = Conexion::getInstance();
     $query = "SELECT * FROM camisetes";
 
     $stmt = $connection->getConnection()->prepare($query);
 
-    
     // Especificamos el fetch mode antes de llamar a fetch()
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     // Ejecutamos
@@ -65,7 +64,7 @@
               <?php
               echo
               "<td class='col-4'>" .
-                "<a href='fitxaProducte.php?id=" . $row["id"] . "'><img src='../img/" . $row["id"] . ".jpg' style='height:140px; width:120px;' /></a>" .
+                "<a href='../fitxaProducte.php?id=" . $row["id"] . "'><img src='../../img/" . $row["id"] . ".jpg' style='height:140px; width:120px;' /></a>" .
                 "</td>" .
                 "<td class='col-4'>" .
                 "<br> - Id Product: " . $row["id"] .
@@ -73,7 +72,7 @@
                 "<br> - Descripcio: " . $row["descripcio"] .
                 "<br> - Preu: " . $row["preu"] .
                 "</td>" .
-                "<td class='col-4'><a href='fitxaProducte.php?id=" . $row["id"] . "'>" ?><button type="button" class="btn btn-primary col-10" style="float:left;margin-top:60px;">Veure producte</button><?php echo "</a></td>";
+                "<td class='col-4'><a href='../fitxaProducte.php?id=" . $row["id"] . "'>" ?><button type="button" class="btn btn-primary col-10" style="float:left;margin-top:60px;">Veure producte</button><?php echo "</a></td>";
                                                                                                                                                                                                       ?>
             </tr>
           </tbody>
